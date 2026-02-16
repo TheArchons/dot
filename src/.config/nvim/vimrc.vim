@@ -6,7 +6,7 @@ call plug#begin()
      
     Plug 'luochen1990/rainbow' 
     
-    Plug 'wakatime/vim-wakatime'
+    "Plug 'wakatime/vim-wakatime'
     
     Plug 'NoahTheDuke/vim-just'
     

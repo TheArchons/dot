@@ -46,7 +46,7 @@ require("toggleterm").setup {
 }
 
 -- nvim-treesitter
-require'nvim-treesitter.configs'.setup {
+--[[require'nvim-treesitter.configs'.setup {
     ensure_installed = "all",
     highlight = {
         enable = true,
@@ -69,7 +69,7 @@ require'nvim-treesitter.configs'.setup {
     matchup = {
         enable = true,
     }
-}
+}--]]
 
 -- Shift + tab to cycle between split windows
 vim.api.nvim_set_keymap('n', '<S-Tab>', '<C-W><C-W>', {noremap = true, silent = true})
