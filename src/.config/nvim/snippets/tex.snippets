@@ -1,0 +1,81 @@
+# in the form Month Year snippet tdate "date for title"
+`!v strftime("%B %Y")`
+endsnippet
+
+snippet tab "table"
+\begin{center}
+    \begin{tabular}{$1}
+        \hline
+		$2
+    \end{tabular}
+\end{center}
+endsnippet
+
+snippet tr "table row"
+\\\\
+\hline
+$0
+endsnippet
+
+snippet eq "equation"
+\begin{equation}
+	$2
+	\label{eq:$1}
+\end{equation}
+endsnippet
+
+snippet dm "discrete math"
+\[
+	$0
+\]
+endsnippet
+
+snippet im "inline math"
+$$0$
+endsnippet
+
+snippet mb "mbox"
+\mbox{$1}$0
+endsnippet
+
+snippet ul "unordered list"
+\begin{itemize}
+	\item $0
+\end{itemize}
+endsnippet
+
+snippet ol "ordered list"
+\begin{enumerate}
+	\item $0
+\end{enumerate}
+endsnippet
+
+snippet fc "fraction"
+\frac{$1}{$2}$0
+endsnippet
+
+snippet rlh "right left harpoons"
+\rightleftharpoons
+endsnippet
+
+snippet rarr "right arrow"
+\rightarrow
+endsnippet
+
+# subscript and superscript, but the left can be anything. For example, 3sub and 3sup
+snippet sub "subscript" i
+_{$0}
+endsnippet
+
+snippet sup "superscript" i
+^{$0}
+endsnippet
+
+snippet fig "figure"
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=\textwidth]{$1}
+	\caption{$2}
+	\label{$3}
+\end{figure}
+endsnippet

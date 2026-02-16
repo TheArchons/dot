@@ -1,0 +1,72 @@
+# A valid snippet should starts with:
+#
+#		snippet trigger_word [ "description" [ options ] ]
+#
+# and end with:
+#
+#		endsnippet
+#
+# Snippet options:
+#
+#		b - Beginning of line.
+#		i - In-word expansion.
+#		w - Word boundary.
+#		r - Regular expression
+#		e - Custom context snippet
+#		A - Snippet will be triggered automatically, when condition matches.
+#
+# Basic example:
+#
+#		snippet emitter "emitter properties" b
+#		private readonly ${1} = new Emitter<$2>()
+#		public readonly ${1/^_(.*)/$1/}: Event<$2> = this.$1.event
+#		endsnippet
+#
+# Online reference: https://github.com/SirVer/ultisnips/blob/master/doc/UltiSnips.txt
+
+snippet base "base" b
+# Date Created: `date +%Y-%m-%d`
+
+# Table of Contents
+${toc}
+
+# Terms
+
+# $0
+endsnippet
+
+snippet dm "math"
+$$
+	$0
+$$
+endsnippet
+
+snippet im "inline math"
+$$0$
+endsnippet
+
+snippet rarr "right arrow"
+\rightarrow
+endsnippet
+
+snippet rlh "right left harp"
+\rightleftharpoons
+endsnippet
+
+# subscript and superscript, but the left can be anything. For example, 3sub and 3sup
+snippet sub "subscript" i
+_{$0}
+endsnippet
+
+snippet sup "superscript" i
+^{$0}
+endsnippet
+
+snippet hl "highlight"
+<mark>$0</mark>
+endsnippet
+
+snippet fc "fraction"
+\frac{$1}{$2}$0
+endsnippet
+
