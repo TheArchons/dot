@@ -80,3 +80,12 @@ require("autoclose").setup()
 -- Use <c-space> to trigger completion
 keyset("i", "<c-space>", "coc#pum#confirm()", {silent = true, expr = true})
 
+-- Navigate to code window on startup
+vim.cmd("autocmd VimEnter * wincmd p")
+
+-- nvim tree should not count as a window, so wq should work as expected
+vim.cmd("autocmd BufEnter * if winnr('$') == 1 && &filetype == 'NvimTree' | quit | endif")
+
+-- use ; to enter command mode
+keyset("n", ";", ":", {noremap = true})
+

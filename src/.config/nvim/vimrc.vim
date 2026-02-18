@@ -95,3 +95,5 @@ let g:copilot_filetypes = {
 "vimtex settings
 let g:tex_flavor='latex'
 
+"use ; as the leader key
+let mapleader = ";"
