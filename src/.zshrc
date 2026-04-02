@@ -12,6 +12,9 @@ fi
 SAVEHIST=1000000000000000  # Save most-recent 10000 lines
 HISTFILE=~/.zsh_history
 
+# update whatis for qman
+(&>/dev/null /usr/local/bin/mkfakewhatis.sh &)
+
 # add /home/archons/.cargo/bin to the path
 export PATH="$HOME/.cargo/bin:$PATH"
 
